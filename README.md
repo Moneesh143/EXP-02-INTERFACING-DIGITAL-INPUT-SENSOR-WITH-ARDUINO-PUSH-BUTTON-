@@ -67,15 +67,32 @@ FIGURE -03
 
 
 PROGRAM 
- 
- 
- 
- 
- 
+```
+ int ButtonState = 0;
 
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
 
+void loop()
+{
+  ButtonState = digitalRead(2);
+  if (ButtonState == HIGH) {
+    digitalWrite(LED_BUILTIN, HIGH);
+  } else {
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
+  delay(10); 
+}
+```
 
 Output of the simulation :
 
-[My image](username.github.com/repository/img/image.jpg)
+![image](https://user-images.githubusercontent.com/97553333/206887635-2aefbea4-114a-41df-a49e-33e8c3600791.png)
+
+Result:
+Thus, we have interfaced a digital input (push button) and blink of LED upon activation.
+
 
